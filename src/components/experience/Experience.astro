@@ -1,0 +1,66 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCIE = [
+  {
+    date: "Diciembre 2022 - Actualidad",
+    position: "Frontend Architect",
+    company: "en Bankinter",
+    responsabilities: [
+      "Diseño y desarrollo de soluciones técnicas escalables enfocadas al entorno cliente, con TypeScript y Angular.",
+      "Generación de herramientas de desarrollo como extensiones de VSCode.",
+      "Estandarización de estilos de codificación haciendo uso de herramientas como Husky, ESlint, Prettier, Commitlint, etc.",
+      "Soporte técnico a los diferentes proyectos, para migraciones, implementaciones o errores."
+    ],
+    accomplishments: [
+      "Participación activa en el desacoplamiento de la arquitectura de Angular a TypeScript nativo en arquitectura hexagonal.",
+      "Migración exitosa de la arquitectura hacia un enfoque de Microfrontends utilizando Webpack Module Federation.",
+      "Contribución en la implementación y unificación de estándar de codificación propio de Bankinter."
+    ]
+  },
+  {
+    date: "Noviembre 2021 - Diciembre 2022",
+    position: "Senior Full Stack Developer",
+    company: "en Sepalo Software",
+    responsabilities: [
+      "Desarrollo de soluciones técnicas escalables enfocadas al entorno cliente, con TypeScript, Angular y Ionic.",
+      "Desarrollo de soluciones técnicas escalables enfocadas al entorno servidor y comunicación RESTful API, con Nodejs, ExpressJS, Sequelize ORM y Postgresql.",
+      "Toma de requisitos y documentación, facilitando la transición fluida de las necesidades a aplicación real.",
+      "Desarrollo de pasarela de pago en base Nodejs, con comunicación estandarizada según en PUC (Protocolo Unificado de Comercios).",
+      "Mentorización de perfiles juniors, charlas y trainings para ampliar los conocimientos del equipo.",
+      "Desarrollo de Test Unitarios (Mocha, Sinonjs, Gulp), E2E, y de carga (Postman, Jmeter)."
+    ],
+    accomplishments: [
+      "Estandarización de procesos de despliegue de las aplicaciones haciendo uso de Docker.",
+      "Estandarización de estilos de codificación para las aplicaciones frontales y backend, del lado de JavaScript.",
+      "Implementación mediante un patrón factory, el desarrollo de diferentes modelos de inteligencia artificial con Keras Framework para las partes de Deep Learning, Sklearn para las partes de Machine Learning en Python.",
+      "Corrección en la concurrencia de datos implementando conexiones WebSockets, con Cecabank usando el PUC."
+    ]
+  },
+  {
+    date: "Octubre 2019 - Noviembre 2021",
+    position: "Full Stack Developer",
+    company: "en NTT Data",
+    responsabilities: [
+      "Desarrollo frontend, con SAPUI5. Haciendo uso de BTP y SCP (Cloud de SAP)",
+      "Desarrollo backend con XSJS, NodeJS haciendo uso de base de datos HANA SQL.",
+      "Toma de requisitos y documentación, facilitando la transición fluida de las necesidades a aplicación real.",
+      "Desarrollo de Test Unitarios (Jasmine)"
+    ],
+    accomplishments: [
+      "Mentorización de perfiles juniors, charlas y trainings para ampliar los conocimientos del equipo.",
+      "Implementación de ORM para el backend y obtención de gran expertise en bases de datos, integrando algoritmos complejos como jerarquía de operaciones o uso de PL SQL de Hana SQL.",
+      "Formé parte del equipo ganador (junto a otro compañero) de un concurso para ganar el proyecto de un importante cliente, para la implementación de un asistente virtual, con utilidades para recursos humanos haciendo uso de SuccessFactors."
+    ]
+  }
+]
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCIE.map(experiencie => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
