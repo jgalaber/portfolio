@@ -1,0 +1,110 @@
+---
+import Layout from "../layouts/Layout.astro"
+
+// Icons
+import Person from "../components/icons/Person.astro"
+import CodeIcon from "../components/icons/Code.astro"
+import Briefcase from "../components/icons/Briefcase.astro"
+import MailIcon from "../components/icons/Mail.astro"
+import LinkedInIcon from "../components/icons/LinkedIn.astro"
+
+// Components
+import SectionContainer from "../components/commons/SectionContainer.astro"
+import SocialPill from "../components/commons/SocialPill.astro"
+import Experience from "../components/experience/Experience.astro"
+import Skills from "../components/skills/Skills.astro"
+import AboutMe from "../components/about-me/AboutMe.astro"
+import ContactMe from "../components/contact-me/ContactMe.astro"
+---
+
+<Layout
+  title="Porfolio de jgalaber - Frontent Architect"
+  description="Portfolio Javier Gala Bermejo. Frontend Architect"
+>
+  <main class="px-4">
+    <SectionContainer class="py-12 pb-20">
+      <img
+        class="rounded-full size-28 mb-4"
+        src="/jgalaber.jpeg"
+        alt="jgalaber photo"
+      />
+      <h1
+        class="text-gray-900 dark:text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
+        Hola, soy Javier Gala
+      </h1>
+
+      <h2
+        class="text-teal-300 text-3xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
+        Frontend Architect
+      </h2>
+
+      <h2 class="text-xl text-balance max-w-[700px] text-black dark:text-white">
+        <span class="text-yellow-800 dark:text-teal-300"
+          >+5 años de experiencia.</span
+        >
+        <span>
+          Dinámico. Autodidacta. Adaptabilidad al cambio y nuevas tecnologías.
+          Proactivo. Habilidades de mentor. Con experiencia en el desarrollo de
+          aplicaciones web en Full Stack, funcionalidades en Inteligencia
+          Artificial, asistentes virtuales
+        </span>
+        <span class="text-amber-700 dark:text-amber-200">
+          De Sevilla, España.</span
+        >
+      </h2>
+
+      <nav class="flex gap-4 mt-8 flex-wrap">
+        <SocialPill href="https://linkedin.com/in/javiergalabermejo">
+          <LinkedInIcon class="size-4 md:size-6" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="mailto:jgalaberdev@gmail.com">
+          <MailIcon class="size-4 md:size-6" />
+          jgalaberdev@gmail.com
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+  </main>
+
+  <SectionContainer id="experiencia">
+    <h2
+      class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
+    >
+      <Briefcase class="size-7" />
+      Experiencia laboral
+    </h2>
+    <Experience />
+  </SectionContainer>
+
+  <SectionContainer id="skills">
+    <h2
+      class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
+    >
+      <CodeIcon class="size-7" />
+      Skills
+    </h2>
+    <Skills />
+  </SectionContainer>
+
+  <SectionContainer id="sobre-mi">
+    <h2
+      class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
+    >
+      <Person class="size-7" />
+      Sobre mí
+    </h2>
+    <AboutMe />
+  </SectionContainer>
+
+  <SectionContainer id="contacto">
+    <h2
+      class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
+    >
+      <MailIcon class="size-7" />
+      Contacto
+    </h2>
+    <ContactMe />
+  </SectionContainer>
+</Layout>
