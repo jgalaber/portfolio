@@ -1,0 +1,40 @@
+---
+import Check from "../icons/Check.astro"
+
+const SKILLS = [
+  "JavaScript",
+  "Team player",
+  "Angular",
+  "TypeScript",
+  "Mentoring",
+  "Svelte",
+  "Python",
+  "Abstract thinking",
+  "Nodejs",
+  "RESTful",
+  "Problem solving",
+  "Docker",
+  "Git (Github, Gitlab, Bitbucket)",
+  "Pragmatic thinking",
+  "Agile principles",
+  "SQL Relational (Postgresql, MySQL, Hana SQL)",
+  "Active Listening",
+  "Scrum principles",
+  "NoSQL (MongoDB)",
+  "Adaptability",
+  "Object-Oriented Programming (OOP)",
+  "SOLID principles",
+  "Lean Mindset",
+  "Domain-Driven design (DDD)"
+]
+---
+
+<ul class="grid md:grid-cols-3 sm:grid-cols-2 gap-y-1 mx-8">
+  {
+    SKILLS.map(elem => (
+      <li class="flex items-center text-md">
+        <Check class="mr-2 min-w-4" /> {elem}
+      </li>
+    ))
+  }
+</ul>
